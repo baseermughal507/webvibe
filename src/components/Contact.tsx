@@ -73,8 +73,8 @@ const Contact = () => {
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Let's Work <span className="text-gradient">Together</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-foreground animate-fade-in">
+            Let's Work Together
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Ready to start your project? Get in touch and let's create something amazing together.
@@ -187,19 +187,10 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Privacy Policy Link */}
+        {/* Contact Form Note */}
         <div className="mt-16 text-center animate-fade-in">
           <p className="text-sm text-muted-foreground">
-            By submitting this form, you agree to our{" "}
-            <button 
-              onClick={() => {
-                const element = document.getElementById("privacy");
-                if (element) element.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="text-primary hover:underline"
-            >
-              Privacy Policy
-            </button>
+            We typically respond to all inquiries within 24 hours.
           </p>
         </div>
       </div>

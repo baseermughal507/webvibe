@@ -116,40 +116,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Privacy Policy Section */}
-        <div id="privacy" className="py-8 border-t border-border">
-          <div className="mb-8">
-            <h3 className="text-xl font-bold mb-4">Privacy Policy</h3>
-            <div className="text-muted-foreground space-y-4 max-w-4xl">
-              <p>
-                At WebVibe, your privacy matters. We only collect information you provide 
-                voluntarily, such as your name, email, or messages through our contact forms.
-              </p>
-              
-              <div>
-                <p className="font-semibold mb-2">We use this information to:</p>
-                <ul className="list-disc list-inside space-y-1 ml-4">
-                  <li>Respond to inquiries and provide our services</li>
-                  <li>Improve our website and user experience</li>
-                </ul>
-              </div>
-
-              <p>
-                We do not sell or share your personal data with third parties. We take 
-                reasonable measures to keep your information secure.
-              </p>
-
-              <p>
-                By using our website, you agree to this Privacy Policy.
-              </p>
-
-              <p>
-                <strong>Contact:</strong> mughalbaseer81@gmail.com
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* Bottom Footer */}
         <div className="py-6 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
@@ -157,8 +123,19 @@ const Footer = () => {
               © 2024 WebVibe. All rights reserved.
             </div>
             
-            <div className="text-sm text-muted-foreground">
-              Built with modern web technologies
+            <div className="flex gap-4 text-sm">
+              <button 
+                onClick={() => window.open("https://policies.google.com/privacy", "_blank")}
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                Privacy Policy
+              </button>
+              <button 
+                onClick={() => window.open("https://policies.google.com/terms", "_blank")}
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                Terms of Service
+              </button>
             </div>
 
             {/* Back to Top Button */}

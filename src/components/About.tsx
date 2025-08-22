@@ -34,8 +34,8 @@ const About = () => {
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Why Choose <span className="text-gradient">Us?</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-foreground animate-fade-in">
+            Why Choose Us?
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             We provide complete digital solutions that help your brand grow, engage audiences, and stand out online. Here's why clients trust us:

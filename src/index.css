@@ -20,9 +20,9 @@
     --popover-foreground: 213 31% 16%;
     
     /* Primary Brand Colors - Professional Blue */
-    --primary: 213 94% 68%;
-    --primary-dark: 213 94% 58%;
-    --primary-light: 213 94% 78%;
+    --primary: 221 100% 50%;
+    --primary-dark: 221 100% 40%;
+    --primary-light: 221 100% 60%;
     --primary-foreground: 0 0% 100%;
     
     /* Secondary Colors - Refined Gray */
@@ -100,9 +100,9 @@
     --card-hover: 213 31% 12%;
     --popover: 213 31% 10%;
     --popover-foreground: 0 0% 95%;
-    --primary: 213 94% 75%;
-    --primary-dark: 213 94% 65%;
-    --primary-light: 213 94% 85%;
+    --primary: 221 100% 60%;
+    --primary-dark: 221 100% 50%;
+    --primary-light: 221 100% 70%;
     --primary-foreground: 213 31% 8%;
     --secondary: 213 31% 15%;
     --secondary-dark: 213 31% 10%;

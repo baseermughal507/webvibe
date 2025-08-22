@@ -91,9 +91,9 @@ const Services = () => {
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Our <span className="text-gradient">Services</span>
-          </h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-foreground animate-fade-in">
+          Our Services
+        </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Complete digital solutions to transform your business and online presence
           </p>

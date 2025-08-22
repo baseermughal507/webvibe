@@ -36,8 +36,8 @@ const Portfolio = () => {
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Our <span className="text-gradient">Work</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-foreground animate-fade-in">
+            Our Work
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Take a look at some of our recent projects that showcase our expertise and creativity
