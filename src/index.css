@@ -2,39 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* WebVibe Design System - Modern Digital Agency Theme */
 
 @layer base {
   :root {
+    /* Core Brand Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 218 100% 6%;
+    
+    /* Card & Surface Colors */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 218 100% 6%;
+    --card-hover: 220 100% 98%;
+    
+    /* Popover Colors */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --popover-foreground: 218 100% 6%;
+    
+    /* Primary Brand Colors - Modern Blue Gradient */
+    --primary: 219 100% 56%;
+    --primary-dark: 219 100% 46%;
+    --primary-light: 219 100% 66%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary Colors - Purple Accent */
+    --secondary: 270 95% 96%;
+    --secondary-dark: 270 95% 86%;
+    --secondary-foreground: 270 100% 25%;
+    
+    /* Success/WhatsApp Green */
+    --success: 142 71% 45%;
+    --success-dark: 142 71% 35%;
+    --success-light: 142 71% 55%;
+    --success-foreground: 0 0% 100%;
+    
+    /* Accent Colors */
+    --accent: 270 95% 96%;
+    --accent-foreground: 270 100% 25%;
+    --accent-gradient: linear-gradient(135deg, hsl(219 100% 56%), hsl(270 100% 60%));
+    
+    /* Utility Colors */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    
+    /* Border & Input */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 219 100% 56%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(219 100% 56%) 0%, hsl(270 100% 60%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(270 95% 96%) 0%, hsl(220 100% 98%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(219 100% 56%) 0%, hsl(270 100% 60%) 50%, hsl(142 71% 45%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 100% 99%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(218 100% 6% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(218 100% 6% / 0.1), 0 2px 4px -1px hsl(218 100% 6% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(218 100% 6% / 0.1), 0 4px 6px -2px hsl(218 100% 6% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(218 100% 6% / 0.1), 0 10px 10px -5px hsl(218 100% 6% / 0.04);
+    --shadow-glow: 0 0 20px hsl(219 100% 56% / 0.3);
+    --shadow-success: 0 0 20px hsl(142 71% 45% / 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 
@@ -56,41 +92,38 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    /* Dark mode adaptation - keeping light theme focus for WebVibe */
+    --background: 218 100% 4%;
+    --foreground: 0 0% 95%;
+    --card: 218 100% 6%;
+    --card-foreground: 0 0% 95%;
+    --card-hover: 218 100% 8%;
+    --popover: 218 100% 6%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 219 100% 66%;
+    --primary-dark: 219 100% 56%;
+    --primary-light: 219 100% 76%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 270 95% 10%;
+    --secondary-dark: 270 95% 6%;
+    --secondary-foreground: 270 95% 90%;
+    --muted: 218 100% 10%;
+    --muted-foreground: 220 9% 60%;
+    --border: 218 100% 15%;
+    --input: 218 100% 15%;
+    --ring: 219 100% 66%;
+    --gradient-primary: linear-gradient(135deg, hsl(219 100% 66%) 0%, hsl(270 100% 70%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(270 95% 10%) 0%, hsl(218 100% 8%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(219 100% 66%) 0%, hsl(270 100% 70%) 50%, hsl(142 71% 55%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(218 100% 6%) 0%, hsl(218 100% 8%) 100%);
+    --sidebar-background: 218 100% 4%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 219 100% 66%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 218 100% 10%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 218 100% 15%;
+    --sidebar-ring: 219 100% 66%;
   }
 }
 
@@ -100,6 +133,82 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Hero Variants */
+  .btn-hero {
+    @apply bg-gradient-to-r from-primary to-accent-gradient text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-glow;
+  }
+
+  .btn-cta {
+    @apply bg-gradient-to-r from-success to-success-light text-success-foreground px-6 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-success;
+  }
+
+  .btn-outline-hero {
+    @apply border-2 border-primary text-primary bg-transparent px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300;
+  }
+
+  /* Card Variants */
+  .card-service {
+    @apply bg-gradient-to-br from-card to-card-hover border border-border rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105;
+  }
+
+  .card-portfolio {
+    @apply bg-gradient-to-br from-card to-card-hover border border-border rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105;
+  }
+
+  .card-testimonial {
+    @apply bg-gradient-to-br from-secondary to-card border border-border rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300;
+  }
+
+  /* Text Styles */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent-gradient bg-clip-text text-transparent;
+  }
+
+  .text-hero {
+    @apply text-5xl md:text-7xl font-bold leading-tight;
+  }
+
+  .text-subhero {
+    @apply text-xl md:text-2xl text-muted-foreground;
+  }
+
+  /* Section Styles */
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Floating Elements */
+  .floating-whatsapp {
+    @apply fixed bottom-6 right-6 z-50 bg-success hover:bg-success-dark text-success-foreground p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-pulse;
+  }
+
+  /* Animations */
+  .fade-in {
+    @apply opacity-0 translate-y-10 transition-all duration-700 ease-out;
+  }
+
+  .fade-in-visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .slide-up {
+    @apply transform translate-y-full transition-transform duration-500 ease-out;
+  }
+
+  .slide-up-visible {
+    @apply translate-y-0;
   }
 }
