@@ -17,14 +17,15 @@ const Hero = () => {
         backgroundImage: `url(${heroDarkImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
+        // Disable background-attachment fixed on mobile for compatibility
+        backgroundAttachment: window.innerWidth > 768 ? 'fixed' : 'scroll'
       }}
     >
-       {/* Dark overlay */}
-  <div className="absolute inset-0 bg-black/40"></div>
-  
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/40"></div>
+
       {/* Animated Background Elements */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-0">
         <div className="absolute top-20 left-20 w-32 h-32 bg-primary/20 rounded-full animate-float"></div>
         <div className="absolute bottom-32 right-20 w-24 h-24 bg-success/20 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
         <div className="absolute top-1/2 left-10 w-16 h-16 bg-accent/20 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
@@ -38,7 +39,10 @@ const Hero = () => {
             We Bring Your Digital Ideas to Life
           </h1>
 
-          <p className="text-xl md:text-2xl text-white/95 mb-16 font-medium animate-slide-up max-w-4xl mx-auto" style={{animationDelay: '0.2s'}}>
+          <p 
+            className="text-xl md:text-2xl text-white/95 mb-16 font-medium animate-slide-up max-w-4xl mx-auto"
+            style={{animationDelay: '0.2s'}}
+          >
             Professional Web Development & Digital Solutions
           </p>
         </div>
@@ -46,15 +50,16 @@ const Hero = () => {
 
       {/* CTA Button fixed above scroll indicator */}
       <div className="absolute bottom-28 left-1/2 transform -translate-x-1/2 z-10">
-      <Button 
-         onClick={scrollToServices}
-        className="btn-hero text-lg px-8 py-4">
+        <Button 
+          onClick={scrollToServices}
+          className="btn-hero text-lg px-8 py-4"
+        >
           Explore Us
-      </Button>
+        </Button>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
         <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-white/70 rounded-full animate-pulse mt-2"></div>
         </div>
