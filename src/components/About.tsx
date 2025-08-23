@@ -83,48 +83,46 @@ const About = () => {
               Our commitment to excellence and innovation drives everything we do
             </p>
           </div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+  {[
+    {
+      title: "Fast Delivery",
+      description: "Quick turnaround times without compromising quality"
+    },
+    {
+      title: "24/7 Support",
+      description: "Always available to help with your questions and concerns"
+    },
+    {
+      title: "Competitive Pricing",
+      description: "Premium services at affordable rates with transparent pricing"
+    },
+    {
+      title: "Future-Proof Solutions",
+      description: "Built with scalability and modern standards in mind"
+    }
+  ].map((benefit, index) => (
+    <div key={index} className="text-center group">
+      <div className="bg-gray-100 dark:bg-gray-800 rounded-xl p-6 
+                  group-hover:bg-gray-800 dark:group-hover:bg-gray-900 
+                  transition-colors">
+        <CheckCircle className="w-8 h-8 text-success mx-auto mb-4" />
+        <h4 className="font-semibold mb-2 
+                  text-gray-900 dark:text-gray-100 
+                  group-hover:text-white">{benefit.title}</h4>
+        <p className="text-sm 
+                  text-gray-700 dark:text-gray-300 
+                  group-hover:text-gray-200 transition-colors">
+          {benefit.description}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                title: "Fast Delivery",
-                description: "Quick turnaround times without compromising quality"
-              },
-              {
-                title: "24/7 Support",
-                description: "Always available to help with your questions and concerns"
-              },
-              {
-                title: "Competitive Pricing",
-                description: "Premium services at affordable rates with transparent pricing"
-              },
-              {
-                title: "Future-Proof Solutions",
-                description: "Built with scalability and modern standards in mind"
-              }
-            ].map((benefit, index) => (
-              <div key={index} className="text-center group">
-                <div className="bg-white/50 rounded-xl p-6 group-hover:bg-white/70 transition-colors">
-                  <CheckCircle className="w-8 h-8 text-success mx-auto mb-4" />
-                  <h4 className="font-semibold mb-2">{benefit.title}</h4>
-                  <p className="text-sm text-muted-foreground">{benefit.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-16 animate-fade-in">
-          <div className="max-w-3xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6">
-              Ready to Transform Your Digital Presence?
-            </h3>
-            <p className="text-lg text-muted-foreground mb-8">
-              Let's work together to create something amazing that drives results for your business
-            </p>
-          </div>
-        </div>
+        
       </div>
     </section>
   );

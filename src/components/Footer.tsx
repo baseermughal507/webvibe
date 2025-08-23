@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowUp, Phone, Mail, MessageCircle } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa"; //  Official WhatsApp logo
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -23,13 +24,13 @@ const Footer = () => {
   const socialLinks = [
     {
       name: "WhatsApp",
-      icon: <MessageCircle className="w-5 h-5" />,
+      icon: <FaWhatsapp className="w-5 h-5" />, //  Replaced MessageCircle with FaWhatsapp
       url: "https://wa.me/923115892707",
       color: "hover:text-green-500"
     },
     {
       name: "LinkedIn", 
-      icon: <MessageCircle className="w-5 h-5" />,
+      icon: <MessageCircle className="w-5 h-5" />, 
       url: "https://www.linkedin.com/in/baseermughal007/",
       color: "hover:text-blue-500"
     },
@@ -108,7 +109,7 @@ const Footer = () => {
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <MessageCircle className="w-4 h-4 text-primary" />
+                  <FaWhatsapp className="w-4 h-4 text-primary" /> {/*  Changed here too */}
                   <span className="text-muted-foreground">WhatsApp Available</span>
                 </div>
               </div>
@@ -120,7 +121,7 @@ const Footer = () => {
         <div className="py-6 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-sm text-muted-foreground">
-              © 2024 WebVibe. All rights reserved.
+              © 2025 WebVibe. All rights reserved.
             </div>
             
             <div className="flex gap-4 text-sm">

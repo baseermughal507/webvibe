@@ -14,7 +14,7 @@ const Testimonials = () => {
       service: "Social Media Management", 
       quote: "Thanks to their social media strategy, our engagement skyrocketed! They handle content creation, posting, and analytics seamlessly.",
       author: "Mike Chen",
-      company: "Local Fitness Studio",
+      company: "Fitness Studio",
       rating: 5
     }
   ];
@@ -80,23 +80,7 @@ const Testimonials = () => {
           ))}
         </div>
 
-        {/* Additional Social Proof */}
-        <div className="mt-16 text-center animate-fade-in">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center p-6">
-              <div className="text-4xl font-bold text-gradient mb-2">98%</div>
-              <div className="text-muted-foreground">Client Satisfaction Rate</div>
-            </div>
-            <div className="text-center p-6">
-              <div className="text-4xl font-bold text-gradient mb-2">24h</div>
-              <div className="text-muted-foreground">Average Response Time</div>
-            </div>
-            <div className="text-center p-6">
-              <div className="text-4xl font-bold text-gradient mb-2">50+</div>
-              <div className="text-muted-foreground">Happy Clients</div>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section>
   );

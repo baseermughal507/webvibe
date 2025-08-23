@@ -21,7 +21,6 @@ const Services = () => {
       ],
       useCases: ["Business websites", "E-commerce stores", "Blogs & news portals", "Portfolio sites"],
       price: "99€",
-      highlight: true,
       image: wordpressImg,
       badge: "Most Popular"
     },
@@ -38,7 +37,6 @@ const Services = () => {
       perfectFor: ["Portfolios", "Landing Pages", "Blogs & Content Websites", "Business Websites with Custom Design"],
       benefits: ["Ultra-fast", "SEO-friendly", "Fully responsive", "Modern & clean design"],
       price: "149€",
-      highlight: true,
       image: codingImg,
       badge: "Premium"
     },
@@ -54,7 +52,6 @@ const Services = () => {
         "SEO and Hashtag Optimization"
       ],
       price: "99€",
-      highlight: true,
       image: socialImg,
       badge: "Growth Focused"
     },
@@ -68,7 +65,6 @@ const Services = () => {
         "AI Editor"
       ],
       price: "29€",
-      highlight: true,
       image: videoImg,
       badge: "Creative"
     },
@@ -80,7 +76,6 @@ const Services = () => {
         "Article Writing"
       ],
       price: "19€",
-      highlight: true,
       image: contentImg,
       badge: "Essential"
     }
@@ -132,6 +127,7 @@ const Services = () => {
                   
                   {service.description && (
                     <p className="text-muted-foreground mb-4">{service.description}</p>
+                    
                   )}
 
                   {/* Features */}
@@ -240,11 +236,6 @@ const Services = () => {
                     <div className="flex items-center justify-between">
                       <div>
                         <span className="text-3xl font-bold text-gradient">{service.price}</span>
-                        {service.highlight && (
-                          <Badge className="ml-2 bg-success text-success-foreground">
-                            Highlight
-                          </Badge>
-                        )}
                       </div>
                     </div>
                   </div>

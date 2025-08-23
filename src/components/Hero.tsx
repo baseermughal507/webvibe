@@ -14,12 +14,15 @@ const Hero = () => {
       id="hero" 
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(135deg, rgba(54, 106, 197, 0.9) 0%, rgba(33, 145, 186, 0.9) 50%, rgba(33, 145, 109, 0.8) 100%), url(${heroDarkImage})`,
+        backgroundImage: `url(${heroDarkImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
       }}
     >
+       {/* Dark overlay */}
+  <div className="absolute inset-0 bg-black/40"></div>
+  
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-32 h-32 bg-primary/20 rounded-full animate-float"></div>
@@ -28,28 +31,26 @@ const Hero = () => {
         <div className="absolute bottom-20 left-1/2 w-20 h-20 bg-primary/10 rounded-full animate-float" style={{animationDelay: '3s'}}></div>
       </div>
 
+      {/* Hero Content */}
       <div className="container-custom relative z-10">
         <div className="text-center animate-fade-in max-w-5xl mx-auto">
-          {/* Main Headline */}
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight animate-slide-up">
             We Bring Your Digital Ideas to Life
           </h1>
 
-          {/* Short, Impactful Tagline */}
           <p className="text-xl md:text-2xl text-white/95 mb-16 font-medium animate-slide-up max-w-4xl mx-auto" style={{animationDelay: '0.2s'}}>
             Professional Web Development & Digital Solutions
           </p>
-
-          {/* CTA Button */}
-          <div className="animate-slide-up absolute bottom-16 left-1/2 transform -translate-x-1/2" style={{animationDelay: '0.4s'}}>
-            <Button 
-              onClick={scrollToServices}
-              className="btn-hero text-lg px-8 py-4"
-            >
-              Explore Us
-            </Button>
-          </div>
         </div>
+      </div>
+
+      {/* CTA Button fixed above scroll indicator */}
+      <div className="absolute bottom-28 left-1/2 transform -translate-x-1/2 z-10">
+      <Button 
+         onClick={scrollToServices}
+        className="btn-hero text-lg px-8 py-4">
+          Explore Us
+      </Button>
       </div>
 
       {/* Scroll Indicator */}
