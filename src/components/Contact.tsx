@@ -15,15 +15,30 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
 
+// Custom frosted glass toast with full red + blur
+const showToast = (title: string, description: string, variant?: "destructive") => {
+  toast({
+    title,
+    description,
+    variant,
+    className: `
+      backdrop-blur-lg rounded-2xl shadow-lg border border-white/20
+      px-6 py-4 text-center
+      ${variant === "destructive" 
+        ? "bg-red-600/90 dark:bg-red-500/90 text-white" 
+        : "bg-white/30 dark:bg-gray-900/30 text-gray-900 dark:text-gray-100"}
+    `
+  });
+};
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!formData.name || !formData.email || !formData.message) {
-      toast({
-        title: "Please fill in all fields",
-        description: "All fields are required to send your message.",
-        variant: "destructive",
-      });
+      showToast(
+        "Please fill in all fields",
+        "All fields are required to send your message.",
+        "destructive"
+      );
       return;
     }
 
@@ -39,24 +54,24 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        toast({
-          title: "Message sent successfully!",
-          description: "We'll get back to you as soon as possible.",
-        });
+        showToast(
+          "Message sent successfully!",
+          "We'll get back to you as soon as possible."
+        );
         setFormData({ name: "", email: "", message: "" });
       } else {
-        toast({
-          title: "Something went wrong",
-          description: "Please try again later.",
-          variant: "destructive",
-        });
+        showToast(
+          "Something went wrong",
+          "Please try again later.",
+          "destructive"
+        );
       }
     } catch (error) {
-      toast({
-        title: "Network error",
-        description: "Please check your internet connection and try again.",
-        variant: "destructive",
-      });
+      showToast(
+        "Network error",
+        "Please check your internet connection and try again.",
+        "destructive"
+      );
     } finally {
       setLoading(false);
     }
@@ -198,33 +213,39 @@ const Contact = () => {
             </div>
 
             {/* Contact Info Cards */}
-            <div className="space-y-6">
-              {contactInfo.map((info, index) => (
-                <Card
-                  key={index}
-                  className="card-service cursor-pointer group"
-                  onClick={() => window.open(info.link, "_blank")}
-                >
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-4">
-                      <div
-                        className={`w-12 h-12 bg-gradient-to-r ${info.gradient} rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform`}
-                      >
-                        {info.icon}
-                      </div>
-                      <div>
-                        <div className="font-semibold text-foreground">
-                          {info.label}
-                        </div>
-                        <div className="text-muted-foreground group-hover:text-primary transition-colors">
-                          {info.value}
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+<div className="space-y-6">
+  {contactInfo.map((info, index) => (
+    <Card
+      key={index}
+      className="card-service cursor-pointer group"
+      onClick={() => {
+        // FIX: Use window.location.href for tel/mailto to avoid blank page on mobile
+        if (info.link.startsWith("tel:") || info.link.startsWith("mailto:")) {
+          window.location.href = info.link;
+        } else {
+          window.open(info.link, "_blank"); // For web URLs like LinkedIn
+        }
+      }}
+    >
+      <CardContent className="p-6">
+        <div className="flex items-center gap-4">
+          <div
+            className={`w-12 h-12 bg-gradient-to-r ${info.gradient} rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform`}
+          >
+            {info.icon}
+          </div>
+          <div>
+            <div className="font-semibold text-foreground">{info.label}</div>
+            <div className="text-muted-foreground group-hover:text-primary transition-colors">
+              {info.value}
             </div>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  ))}
+</div>
+
 
             {/* Quick Response Promise */}
             <div className="bg-gradient-primary p-6 rounded-2xl text-white">
