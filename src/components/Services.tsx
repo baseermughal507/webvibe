@@ -1,6 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Sparkles } from "lucide-react";
+import { motion } from "framer-motion";
+
 import wordpressImg from "@/assets/wordpress-service.jpg";
 import codingImg from "@/assets/coding-service.jpg";
 import socialImg from "@/assets/social-service.jpg";
@@ -84,15 +86,21 @@ const Services = () => {
   return (
     <section id="services" className="section-padding bg-gradient-to-br from-background to-secondary/20">
       <div className="container-custom">
-        {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-foreground animate-fade-in">
-          Our Services
-        </h2>
+        {/* Section Header with scroll animation */}
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-foreground">
+            Our Services
+          </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Complete digital solutions to transform your business and online presence
           </p>
-        </div>
+        </motion.div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
@@ -127,7 +135,6 @@ const Services = () => {
                   
                   {service.description && (
                     <p className="text-muted-foreground mb-4">{service.description}</p>
-                    
                   )}
 
                   {/* Features */}
