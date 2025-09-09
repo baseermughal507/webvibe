@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 const rotatingWords = [
   "WEB DEVELOPMENT",
-  "SOCIAL MEDIA MANAGMENT",
+  "SOCIAL MEDIA",
   "DIGITAL SOLUTIONS",
   "VIDEO EDITING",
   "CONTENT WRITING",
