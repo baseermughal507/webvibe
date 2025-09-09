@@ -6,7 +6,7 @@ const Testimonials = () => {
   const testimonials = [
     {
       service: "Web Development",
-      quote: "WebVibe transformed our website into a modern, fast, and responsive platform. Our clients love the new look, and the performance improvements are amazing!",
+      quote: "WebServices transformed our website into a modern, fast, and responsive platform. Our clients love the new look, and the performance improvements are amazing!",
       author: "Sarah Johnson",
       company: "TechStart Solutions",
       rating: 5,

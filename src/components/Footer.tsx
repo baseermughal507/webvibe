@@ -56,7 +56,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Brand Section */}
             <div className="lg:col-span-2">
-              <div className="text-3xl font-bold text-gradient mb-4">WebVibe</div>
+              <div className="text-3xl font-bold text-gradient mb-4">Web Services</div>
               <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
                 We bring your digital ideas to life with modern web development, 
                 social media management, video editing, and content creation services.
@@ -121,7 +121,7 @@ const Footer = () => {
         <div className="py-6 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-sm text-muted-foreground">
-              © 2025 WebVibe. All rights reserved.
+              © 2025 WebServices. All rights reserved.
             </div>
             
             <div className="flex gap-4 text-sm">

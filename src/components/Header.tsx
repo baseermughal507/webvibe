@@ -23,7 +23,7 @@ const Header = () => {
             className="text-2xl md:text-3xl font-bold text-gradient cursor-pointer transition-transform hover:scale-105"
             onClick={() => scrollToSection("hero")}
           >
-            WebVibe
+            Web Services
           </div>
 
           {/* Desktop Navigation */}

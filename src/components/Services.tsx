@@ -17,7 +17,7 @@ const Services = () => {
       description: "Best when clients want easy management of content.",
       features: [
         "Content Management System (CMS) - clients can add/edit pages, blogs, products without coding",
-        "Can handle e-commerce (WooCommerce), booking systems, blogs, etc.",
+        "Can handle E-commerce (WooCommerce), booking systems, blogs, etc.",
         "Thousands of plugins - SEO, security, payments, analytics",
         "Custom themes or fully coded themes possible"
       ],
@@ -36,7 +36,7 @@ const Services = () => {
         "🎨 Tailwind CSS – Modern, responsive, and sleek designs",
         "🧩 shadcn/ui – Beautiful, pre-built components for professional UI"
       ],
-      perfectFor: ["Portfolios", "Landing Pages", "Blogs & Content Websites", "Business Websites with Custom Design"],
+      perfectFor: ["Portfolios", "Landing Pages", "Blogs & Content Websites"],
       benefits: ["Ultra-fast", "SEO-friendly", "Fully responsive", "Modern & clean design"],
       price: "149€",
       image: codingImg,
