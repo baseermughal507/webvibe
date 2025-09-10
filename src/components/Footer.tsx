@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ArrowUp, Phone, Mail, MessageCircle } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa"; //  Official WhatsApp logo
+import FooterPhoneIcon from "@/components/animations/FooterPhoneIcon";
+import FooterEmailIcon from "@/components/animations/FooterEmailIcon";
+import FooterWhatsappIcon from "@/components/animations/FooterWhatsappIcon";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -96,24 +99,33 @@ const Footer = () => {
 
             {/* Contact Info */}
             <div>
-              <h4 className="font-bold text-lg mb-6">Contact Info</h4>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <Phone className="w-4 h-4 text-primary" />
-                  <span className="text-muted-foreground">+92 311 5892707</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Mail className="w-4 h-4 text-primary" />
-                  <span className="text-muted-foreground text-sm">
+                <h4 className="font-bold text-lg mb-6">Contact Info</h4>
+                <div className="space-y-4">
+                {/* Phone */}
+                  <div className="flex items-center gap-3">
+                  <FooterPhoneIcon />
+                  <a href="tel:+923115892707" className="text-muted-foreground hover:underline">
+                    +92 311 5892707
+                  </a>
+                  </div>
+
+                  {/* Email */}
+                  <div className="flex items-center gap-3">
+                  <FooterEmailIcon />
+                  <a href="mailto:mughalbaseer81@gmail.com" className="text-muted-foreground hover:underline">
                     mughalbaseer81@gmail.com
-                  </span>
+                  </a>
+                  </div>
+
+                  {/* WhatsApp */}
+                  <div className="flex items-center gap-3">
+                  <FooterWhatsappIcon />
+                  <a href="https://wa.me/923115892707" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:underline">
+                    WhatsApp Available
+                  </a>
                 </div>
-                <div className="flex items-center gap-3">
-                  <FaWhatsapp className="w-4 h-4 text-primary" /> {/*  Changed here too */}
-                  <span className="text-muted-foreground">WhatsApp Available</span>
                 </div>
-              </div>
-            </div>
+                </div>
           </div>
         </div>
 
