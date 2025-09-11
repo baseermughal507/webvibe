@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import heroDarkImage from "@/assets/hero-bg-dark.jpg";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+
 
 const rotatingWords = [
   "WEB DEVELOPMENT",
@@ -92,12 +94,19 @@ const Hero = () => {
         </Button>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/70 rounded-full animate-pulse mt-2"></div>
+      {/* Scroll Indicator with Lottie */}
+        <div
+          onClick={scrollToServices}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 cursor-pointer w-12 h-12"
+        >
+          <DotLottieReact
+            src="https://lottie.host/69b63d46-f4cf-4502-8701-1082d7f85bb2/KuZlXidzvi.lottie"
+            loop
+            autoplay
+            style={{ width: "100%", height: "100%" }}
+          />
         </div>
-      </div>
+
     </section>
   );
 };
